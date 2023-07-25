@@ -92,7 +92,7 @@ class PasswordForm extends Component {
       searchInput,
     } = this.state
     const filteredPasswordList = passwordListItems.filter(eachPasswords =>
-      eachPasswords.website.includes(searchInput),
+      eachPasswords.website.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
     return (
